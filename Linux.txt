@@ -1,0 +1,19 @@
+hostname   输出主机名
+hostname  aaa  主机名改为aaa
+df -h 查看设备挂载情况
+systemctl enable mysqld  开机自启
+systemctl disable mysql  关闭开机自启
+lsof -i:6379   查看端口情况
+df -h 查看磁盘剩余空间
+tar -zxvf .tar.gz -C /tmp
+解压到指定位置
+tar -ztvf  .tar.gz  
+查看文件目录情况  t  test
+find /root -iname  "*.conf"  -size  25k
+i  不区分大小写
+-25k  小于
+25k刚好
++25k  大于25k文件
+-a  与  -o  或
+-size +26k -a -size -50k 
+大于26k  小于50k
