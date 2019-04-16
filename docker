@@ -1,0 +1,11 @@
+docker cp centos:/var/lib/a.txt /tmp
+将centos下的/var/lib/a.txt  拷到本机  /tmp目录
+
+
+docker rename centos mycentos
+将docker容器centos重命名为mycentos
+
+docker run -it --link=nginx --name=centos1 centos
+
+将容器名为nginx的容器网络和本容器链接起来
+
