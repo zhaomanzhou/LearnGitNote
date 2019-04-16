@@ -1,0 +1,76 @@
+Linux服务管理
+runlevel 查看运行级别 3字符 5图形 0关机 6重启
+init 5 将运行级别调到5
+
+计算机网络
+ttl默认
+Linux 64
+windows 128
+Unix 256
+
+ping参数
+-t 一直ping
+-i 3 指定ttl为3
+pathping 跟踪数据包路径 windows下才有
+
+zip -r jp.zip jp
+将jp目录内的文件压缩成jp.zip文件
+
+
+gzip 源文件
+压缩成.gz格式的压缩文件,源文件会消失
+
+gzip -c 源文件 > 压缩文件
+压缩为.gz格式,源文件保留
+gzip -r 目录
+压缩目录下所有的子文件,但是不能压缩目录
+
+gzip -d 压缩文件
+解压缩
+gunzip 压缩文件
+解压缩
+gzip -r 压缩文件
+解压目录
+
+
+bzip2 源文件
+压缩成.bz2格式,不保留源文件
+
+bzip2 -k 源文件
+压缩之后保留源文件
+
+bzip2 不支持目录
+
+bzip2 -d .bz2文件
+解压缩
+
+bunzip2 .bz2文件
+解压缩
+
+tar -cvf 打包文件名  源文件
+    -c  打包
+    -v  显示过程
+    -f  指定打包后的文件名
+tar -cvf  etc.tar etc
+
+tar -xvf 打包文件名
+    -x  解打包
+
+tar -xvf  etc.tar
+
+
+
+
+echo -e '\e[1;31m  warning  \e[0m'
+输出有颜色的文字
+
+ln -s  源文件  目标文件(快捷方式路径)
+创建软连接
+
+unzip -v test.zip
+查看压缩文件夹目录结构 不解压
+
+
+unzip -O GBK
+
+指定用GBK编码解压
