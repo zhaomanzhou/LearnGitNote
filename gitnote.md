@@ -10,6 +10,8 @@ git log
 查询提交记录
 git log --oneline
 一个记录显示一行
+git log --graph
+查看分支合并图
 git reflog
 hash值显示比较短
 
@@ -23,7 +25,9 @@ git reset --hard~3
 git reset HEAD 1.txt
 恢复到HEAD指针当前所指的值 
 git chechout -- 1.txt
-把暂存区修改回归到工作区
+丢弃工作区的修改     即恢复到上次commit状态中间没有add
+git reset HEAD <file>
+把暂存区的修改撤销掉（unstage），重新放回工作区
 git rm 1.txt
 将1.txt清除 
 
@@ -42,6 +46,12 @@ git checkout hot_fix
 切换到hot_fix分支
 git merge hot_fix
 将hot_fix分支的动作合并到当前分支
+git checkout命令加上-b参数表示创建并切换，相当于以下两条命令
+git branch dev
+git checkout dev
+====
+git branch -d dev
+删除dev分支
 
 git remote -v
 查看远程仓库信息
@@ -51,6 +61,19 @@ git remote rm origin
 删除远程地址
 git push origin master
 推从到远程仓库
+
+
+git pull origin master
+从origin master分支源获取最新提交并合并
+
+git pull相当于git fetch + git merge
+
+git fetch origin master:tmp
+从origin master分支源获取最新提交到本地tmp分支
+
+git rebase
+本地修改提交，远程仓库比本地仓库提前，从远程仓库pull一下
+然后运行git rebase 会把本地提交置于 pull后提交之后
 
 tail -n 3 文件名
 显示文件最后三行
